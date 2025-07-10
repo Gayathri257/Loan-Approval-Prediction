@@ -44,3 +44,15 @@ from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 X[numerical_features] = scaler.fit_transform(X[numerical_features])
+
+### 5.Model Building
+
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+### 6.Model Evaluation
+Accuracy Score
+Confusion Matrix
+Classification Report (Precision, Recall, F1-score)
