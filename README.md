@@ -40,15 +40,13 @@ The dataset includes information about applicants such as:
 
 ### 4. **Feature Scaling**
 ```python
-from sklearn.preprocessing import StandardScaler
+  from sklearn.preprocessing import StandardScaler
+  scaler = StandardScaler()
+  X[numerical_features] = scaler.fit_transform(X[numerical_features])
 
-scaler = StandardScaler()
-X[numerical_features] = scaler.fit_transform(X[numerical_features])
-
-### 5.Model Building
+### 5. **Model Building**
 
 from sklearn.ensemble import RandomForestClassifier
-
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
